@@ -14,9 +14,13 @@ import android.view.View;
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
             Paint paint = new Paint();
-            paint.setColor(Color.BLUE);
+            paint.setColor(Color.YELLOW);
             paint.setStyle(Paint.Style.FILL);
-            canvas.drawRect(100, 100, 500, 500, paint);
+            canvas.drawCircle(300, 300, 200, paint);
+            paint.setColor(Color.RED);
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(20);
+            canvas.drawCircle(300, 300, 200, paint);
         }
 
 
