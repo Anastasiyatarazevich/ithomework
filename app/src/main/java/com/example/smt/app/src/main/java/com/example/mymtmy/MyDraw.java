@@ -8,7 +8,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 
 
-public class MyDraw extends View {
+/*public class MyDraw extends View {
 
     int N = 15;
     int[] l = new int [N];
@@ -88,4 +88,4 @@ public class MyDraw extends View {
         public void onFinish() {
         }
     }
-}
+}*/
