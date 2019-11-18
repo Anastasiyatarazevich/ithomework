@@ -1,6 +1,6 @@
 package com.example.mymtmy;
 
-import android.content.Context;
+/*import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -89,4 +89,4 @@ public class MyDraw extends View {
         public void onFinish() {
         }
     }
-}
+}*/
