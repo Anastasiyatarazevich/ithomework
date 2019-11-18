@@ -8,7 +8,7 @@ import android.graphics.Path;
 import android.graphics.Shader;
 import android.view.View;
 
-public class MyGraph extends View {
+/*public class MyGraph extends View {
     double xe, ye, w;
     double x, y, h = 0.1;
     int k = 100;
@@ -22,7 +22,7 @@ public class MyGraph extends View {
 
         Paint paint = new Paint();
         paint.setStrokeWidth(5);
-        paint.setColor(Color.BLACK);
+        paint.setColor(Color.RED);
         paint.setStyle(Paint.Style.STROKE);
         paint.setTextSize(30.0f);
 
@@ -33,7 +33,7 @@ public class MyGraph extends View {
 
         Path path = new Path();
         boolean first = true;
-        paint.setColor(Color.BLUE);
+        paint.setColor(Color.CYAN);
         for (x = xmin; x < xmax; x += h) {
 
             y=Math.abs(x);
@@ -49,6 +49,7 @@ public class MyGraph extends View {
                 path.lineTo((float) xe, (float) ye);
             }
             canvas.drawPath(path, paint);
+
         }
         Path path2 = new Path();
         first = true;
@@ -73,4 +74,4 @@ public class MyGraph extends View {
     public MyGraph(Context context) {
         super(context);
     }
-}
+}*/

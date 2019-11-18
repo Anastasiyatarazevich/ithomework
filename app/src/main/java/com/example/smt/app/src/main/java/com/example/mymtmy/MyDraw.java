@@ -8,7 +8,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 
 
-/*public class MyDraw extends View {
+public class MyDraw extends View {
 
     int N = 15;
     int[] l = new int [N];
@@ -61,11 +61,12 @@ import android.view.View;
         canvas.drawCircle((float) x0, (float) y0, 10, paint);
         for (int i = 0; i<N; i++)
         {
-            paint.setColor(Color.BLUE);
+            paint.setColor(Color.YELLOW);
             canvas.drawLine((float)x0, (float)y0, (float)(x[i] + x0), (float)(y[i]+ y0), paint);
-            paint.setColor(Color.RED);
+            paint.setColor(Color.CYAN);
             canvas.drawCircle((float)(x[i] + x0), (float)(y[i] + y0), 20, paint);
         }
+
     }
 
     void nextFrame()
@@ -88,4 +89,4 @@ import android.view.View;
         public void onFinish() {
         }
     }
-}*/
+}
