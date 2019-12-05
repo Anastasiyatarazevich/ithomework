@@ -1,7 +1,7 @@
 package com.example.mymtmy;
 
 
-
+/*
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
@@ -86,10 +86,7 @@ public class CellsActivity extends Activity implements OnClickListener,
 
     }
 
-    /*
-     * NOT FOR THE BEGINNERS
-     * ==================================================
-     */
+
 
     int getX(View v) {
         return Integer.parseInt(((String) v.getTag()).split(",")[1]);
@@ -116,4 +113,4 @@ public class CellsActivity extends Activity implements OnClickListener,
             }
     }
 
-}
+}*/

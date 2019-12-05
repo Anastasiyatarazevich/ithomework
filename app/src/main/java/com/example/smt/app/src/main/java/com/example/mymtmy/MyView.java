@@ -5,7 +5,7 @@ import android.graphics.*;
 import android.view.View;
 
 
-/*public class MyView extends View {
+public class MyView extends View {
     int N = 10; // количество шариков
     float[] x  = new float[N];
     float[] y  = new float[N];
@@ -53,4 +53,4 @@ import android.view.View;
         //запрашиваем перерисовку
         invalidate();
     }
-}*/
+}

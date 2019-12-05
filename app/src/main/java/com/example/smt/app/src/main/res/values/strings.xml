@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">mymtmy</string>
+
+    <string name="first">Фамилия</string>
+    <string name="second"> Имя</string>
+    <string name="third">Отчество</string>
+    <string name="fourth">Год</string>
+    <string name="fifth">Школа</string>
+    <string name="sixth">Город</string>
+    <string name="seventh">Опыт программирования</string>
+    <string name="eighth">Знание языков программирования</string>
 </resources>
