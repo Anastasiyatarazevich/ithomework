@@ -1,11 +1,8 @@
 <resources>
-
-    <string name="first">Фамилия</string>
-    <string name="second"> Имя</string>
-    <string name="third">Отчество</string>
-    <string name="fourth">Год</string>
-    <string name="fifth">Школа</string>
-    <string name="sixth">Город</string>
-    <string name="seventh">Опыт программирования</string>
-    <string name="eighth">Знание языков программирования</string>
+    <string name="app_name">My Application</string>
+    <string name="title">Решить уравнение a*x-b=c</string>
+    <string name="a">Введите A</string>
+    <string name="b">Введите B</string>
+    <string name="c">Введите C</string>
+    <string name="calculate">Вычислить</string>
 </resources>
