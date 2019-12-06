@@ -5,31 +5,62 @@ package com.example.mymtmy;
 
 import android.app.Activity;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends Activity {
-    // Вызывается при создании Активности
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    protected static final int RESULT_SPEECH = 1;
+    private ImageButton btnSpeak;
+    private TextView textView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Инициализирует Активность.
         setContentView(R.layout.activity_main);
-    }
+        btnSpeak = (ImageButton) findViewById(R.id.question);
+        textView = (TextView) findViewById(R.id.text);
+        View.OnClickListener listener= new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(
+                        RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                        "en-US");
+                try {
+                    startActivityForResult(intent, RESULT_SPEECH);
+                } catch (ActivityNotFoundException a) {
+                    Toast.makeText(getApplicationContext(),
+                            "текст не распознан",
+                            Toast.LENGTH_SHORT).show();
+                }
 
-    /** Вызывается при нажатии пользователем на кнопку Решить */
-    public void solveEquation(View view) {
-        // ax+b=c
-        double a = Double.parseDouble( ((EditText)
-                findViewById(R.id.coefficient_a)).getText().toString());
-        double b = Double.parseDouble( ((EditText)
-                findViewById(R.id.coefficient_b)).getText().toString());
-        double c = Double.parseDouble( ((EditText)
-                findViewById(R.id.coefficient_c)).getText().toString());
-        TextView result = (TextView) findViewById(R.id.result);
-        result.setText("" + String.valueOf((c - b) / a));
+            }
+        };
+        btnSpeak.setOnClickListener(listener);
     }
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,Intent
+            data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case RESULT_SPEECH: {
+                if (resultCode == RESULT_OK && null != data) {
+                    ArrayList<String> text = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    textView.setText(text.get(0));
+                }
+                break;
+            }
+        }
+    }
 }
